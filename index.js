@@ -26,15 +26,6 @@ newStoriesRef.on("value", function(snapshot) {
       }, function(err, message) {
         console.log(message);
       });
-
-    if(host === "austenallred.com") {
-      client.messages.create({
-        body: story.by + " just posted " + story.title + "on HN!",
-        to: "+18013692444", // your cell number
-        from: "+18019215364" // your twilio number
-      }, function(err, message) {
-        console.log(message);
-      });  
     }
   });
 });
